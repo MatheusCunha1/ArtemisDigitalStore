@@ -1,0 +1,9 @@
+@URL=http://localhost/bijuteria/api
+
+@JWT=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEiLCJub21lIjoiSnVjYSBkYSBTaWx2YSIsImVtYWlsIjoianVjYUBnbWFpbC5jb20iLCJhZG1pbiI6IjAifQ.demzZ2YmresArMz8wWJIPkI8MyiwA4r8hyjKvcQZTCE
+
+### -----------------------------------------
+### Obter um produto pelo ID
+GET {{URL}}/produto/get.php?id=1
+### -----------------------------------------
+

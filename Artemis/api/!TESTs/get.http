@@ -1,0 +1,11 @@
+@URL=http://localhost/bijuteria/api
+
+@JWT= eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYiLCJub21lIjoiTWF0aGV1cyBDdW5oYSIsImVtYWlsIjoiTWF0aGV1Y3VuaGEwQGdtYWlsLmNvbSIsImFkbWluIjoiMCJ9.kteRRAnlH-0mABuCEG-s7V3pk8A30rz7ZlVA__W6h_o';
+
+
+### -----------------------------------------
+### Msotrar produtos 
+POST {{URL}}/produto/get.php
+Content-Type: application/json
+Authorization: {{JWT}}
+

@@ -1,0 +1,80 @@
+@URL=http://localhost/bijuteria/api
+
+#JWT de Usuário:
+@JWT=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEiLCJub21lIjoiSnVjYSBkZSBPbGl2ZWlyYSIsImVtYWlsIjoianVjYW9saXZlaXJhQGdtYWlsLmNvbSIsImFkbWluIjoiMCJ9.LjMNb9AJINmj7_UsrRE7UqN8Xn8Hb0VRk68kV1YASVE
+
+### JWT Admin
+@JWT=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjUiLCJub21lIjoiQW5hIE1hcmlhIiwiZW1haWwiOiJhbmFAZ21haWwuY29tIiwiYWRtaW4iOiIxIn0.UqttgaMSd9FwlCjgDNnHpXc1y9eLY-21G8Z7xV9HQ9M
+
+
+### -----------------------------------------
+### Criar uma compra
+POST {{URL}}/compra/create.php
+Content-Type: application/json
+Authorization: {{JWT}}
+
+{
+    "valor": 1000,
+    "itens": [
+        { 
+            "produto_id": 1, 
+            "quantidade": 2
+        },
+        { 
+            "produto_id": 3, 
+            "quantidade": 1
+        }
+    ]
+}
+### -----------------------------------------
+
+
+
+### -----------------------------------------
+### Atualizar uma compra
+POST {{URL}}/compra/update.php?id=1
+Content-Type: application/json
+Authorization: {{JWT}}
+
+{
+    "nome":"Televisor LG 55",
+    "descricao":"Televisor LED de 55''...",
+    "categoria_id": 2,
+    "imagem": "prod.jpg",
+    "preco": 3500,
+    "quantidade": 40
+}
+### -----------------------------------------
+
+
+
+### -----------------------------------------
+### Obter todas as compras do usuário autenticado
+GET {{URL}}/compra/get.php
+Authorization: {{JWT}}
+
+### -----------------------------------------
+
+
+### -----------------------------------------
+### Obter todas as compras do sistema
+###  Permissão: somente admin.
+GET {{URL}}/compra/get.php?todos=1
+Authorization: {{JWT}}
+### -----------------------------------------
+
+
+
+### -----------------------------------------
+### Obter uma compra pelo ID
+GET {{URL}}/compra/get.php?id=2
+Authorization: {{JWT}}
+### -----------------------------------------
+
+
+
+### -----------------------------------------
+### Deletar uma compra
+GET {{URL}}/compra/delete.php?id=9
+Authorization: {{JWT}}
+### -----------------------------------------

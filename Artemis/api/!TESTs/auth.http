@@ -1,0 +1,11 @@
+### cliente de autenticação
+@URL=http://localhost/cc53b/5.FrontBack/webapp/api
+
+### Recurso de autentificação
+POST {{URL}}/auth/auth.php
+
+{
+    "username": "jucaoliveira@gmail.com",
+    "password": "1234"
+}
+

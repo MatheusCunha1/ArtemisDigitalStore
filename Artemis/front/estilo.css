@@ -1,0 +1,19 @@
+body {
+  padding: 5px;
+  font-family: Helvetica;
+}
+
+#posts > div {
+  background: #eee;
+  border-radius: 4px;
+  padding: 5px;
+  margin-bottom: 5px;
+  min-height: 36px;
+  transition: all 0.2s;
+}
+
+#posts > div > img {
+  float: left;
+  height: 36px;
+  padding: 3px;
+}

@@ -1,0 +1,59 @@
+@URL=http://localhost/cc53b/5.FrontBack/webapp/api
+@JWT=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEiLCJub21lIjoiSnVjYSBkYSBTaWx2YSIsImVtYWlsIjoianVjYUBnbWFpbC5jb20iLCJhZG1pbiI6IjAifQ.demzZ2YmresArMz8wWJIPkI8MyiwA4r8hyjKvcQZTCE
+#@JWT=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjMiLCJub21lIjoiQW5hIE1hcmlhIiwiZW1haWwiOiJhbmFAZ21haWwuY29tIiwiYWRtaW4iOiIxIn0.21Tv4I4cqU8ykZZA_37V90vom7PoRBDvRClCYkWY3Tc
+
+
+### -----------------------------------------
+### Criar um usuário
+POST {{URL}}/user/create.php
+Content-Type: application/json
+
+{
+    "nome":"Ana Maria",
+    "nascimento":"1985-04-01",
+    "telefone":"45 999990000",
+    "email":"ana@gmail.com",
+    "senha":"1234"
+}
+### -----------------------------------------
+
+
+
+### -----------------------------------------
+### Atualizar um usuário
+POST {{URL}}/user/update.php?id=1
+Content-Type: application/json
+Authorization: {{JWT}}
+
+{
+    "nome":"Juca de Oliveira",
+    "nascimento":"1986-04-01",
+    "telefone":"45 999991111",
+    "email":"jucaoliveira@gmail.com",
+    "senha":"12345"
+}
+### -----------------------------------------
+
+
+
+### -----------------------------------------
+### Obter todos os usuários
+GET {{URL}}/user/get.php
+Authorization: {{JWT}}
+### -----------------------------------------
+
+
+
+### -----------------------------------------
+### Obter um usuário pelo ID
+GET {{URL}}/user/get.php?id=3
+Authorization: {{JWT}}
+### -----------------------------------------
+
+
+
+### -----------------------------------------
+### Deletar um usuário
+GET {{URL}}/user/delete.php?id=3
+Authorization: {{JWT}}
+### -----------------------------------------

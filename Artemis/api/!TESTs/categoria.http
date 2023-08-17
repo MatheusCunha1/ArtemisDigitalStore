@@ -1,0 +1,53 @@
+@URL=http://localhost/cc53b/5.FrontBack/webapp/api
+#JWT de Usuário:
+@JWT=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEiLCJub21lIjoiSnVjYSBkZSBPbGl2ZWlyYSIsImVtYWlsIjoianVjYW9saXZlaXJhQGdtYWlsLmNvbSIsImFkbWluIjoiMCJ9.LjMNb9AJINmj7_UsrRE7UqN8Xn8Hb0VRk68kV1YASVE
+
+### JWT Admin
+#@JWT=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjUiLCJub21lIjoiQW5hIE1hcmlhIiwiZW1haWwiOiJhbmFAZ21haWwuY29tIiwiYWRtaW4iOiIxIn0.UqttgaMSd9FwlCjgDNnHpXc1y9eLY-21G8Z7xV9HQ9M
+
+
+### -----------------------------------
+### Obter todas as categorias
+GET {{URL}}/categoria/get.php
+### -----------------------------------
+
+
+### -----------------------------------
+### Obter uma categoria pelo ID
+GET {{URL}}/categoria/get.php?id=1
+### -----------------------------------
+
+
+
+### -----------------------------------
+### Criar uma categoria
+POST {{URL}}/categoria/create.php
+Content-Type: application/json
+Authorization: {{JWT}}
+
+{
+  "nome": "Eletrônicos"
+}
+### -----------------------------------
+
+
+
+### Atualizar uma categoria
+POST {{URL}}/categoria/update.php?id=1
+Content-Type: application/json
+Authorization: {{JWT}}
+
+{
+  "nome": "AAA"
+}
+### -----------------------------------
+
+
+
+
+### -----------------------------------
+### Deletar uma categoria
+GET {{URL}}/categoria/delete.php?id=4
+Authorization: {{JWT}}
+
+### -----------------------------------
