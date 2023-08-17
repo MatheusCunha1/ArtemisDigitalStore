@@ -1,4 +1,4 @@
-**Nome do Repositório:** ArtemisDigitalStore
+# ArtemisDigitalStore
 
 **Descrição:**
 Bem-vindo ao ArtemisDigitalStore, um projeto de e-commerce desenvolvido individualmente como parte da disciplina "Linguagens de Estruturação e Apresentação de Conteúdos" na UTFPR (Universidade Tecnológica Federal do Paraná). Este repositório concentra-se na implementação da interação do front-end com os arquivos .php, bem como no armazenamento de dados no banco e na exibição de produtos.
